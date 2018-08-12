@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : kholidays
-Version  : 5.48.0
-Release  : 1
-URL      : https://download.kde.org/stable/frameworks/5.48/kholidays-5.48.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.48/kholidays-5.48.0.tar.xz
-Source99 : https://download.kde.org/stable/frameworks/5.48/kholidays-5.48.0.tar.xz.sig
+Version  : 5.49.0
+Release  : 2
+URL      : https://download.kde.org/stable/frameworks/5.49/kholidays-5.49.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.49/kholidays-5.49.0.tar.xz
+Source99 : https://download.kde.org/stable/frameworks/5.49/kholidays-5.49.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -18,6 +18,7 @@ Requires: kholidays-license
 Requires: kholidays-data
 BuildRequires : buildreq-cmake
 BuildRequires : buildreq-kde
+BuildRequires : qtbase-dev qtbase-extras mesa-dev
 
 %description
 To generate the Bison/Flex parser/scanner code after any changes to
@@ -61,14 +62,14 @@ license components for the kholidays package.
 
 
 %prep
-%setup -q -n kholidays-5.48.0
+%setup -q -n kholidays-5.49.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532462262
+export SOURCE_DATE_EPOCH=1534095917
 mkdir clr-build
 pushd clr-build
 %cmake ..
@@ -76,7 +77,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1532462262
+export SOURCE_DATE_EPOCH=1534095917
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/kholidays
 cp COPYING.LIB %{buildroot}/usr/share/doc/kholidays/COPYING.LIB
@@ -167,17 +168,20 @@ popd
 /usr/include/KF5/KHolidays/KHolidays/Holiday
 /usr/include/KF5/KHolidays/KHolidays/HolidayRegion
 /usr/include/KF5/KHolidays/KHolidays/LunarPhase
+/usr/include/KF5/KHolidays/KHolidays/SunRiseSet
 /usr/include/KF5/KHolidays/KHolidays/Zodiac
 /usr/include/KF5/KHolidays/kholidays/AstroSeasons
 /usr/include/KF5/KHolidays/kholidays/Holiday
 /usr/include/KF5/KHolidays/kholidays/HolidayRegion
 /usr/include/KF5/KHolidays/kholidays/LunarPhase
+/usr/include/KF5/KHolidays/kholidays/SunRiseSet
 /usr/include/KF5/KHolidays/kholidays/Zodiac
 /usr/include/KF5/KHolidays/kholidays/astroseasons.h
 /usr/include/KF5/KHolidays/kholidays/holiday.h
 /usr/include/KF5/KHolidays/kholidays/holidayregion.h
 /usr/include/KF5/KHolidays/kholidays/kholidays_export.h
 /usr/include/KF5/KHolidays/kholidays/lunarphase.h
+/usr/include/KF5/KHolidays/kholidays/sunriseset.h
 /usr/include/KF5/KHolidays/kholidays/zodiac.h
 /usr/include/KF5/kholidays_version.h
 /usr/lib64/cmake/KF5Holidays/KF5HolidaysConfig.cmake
@@ -190,7 +194,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKF5Holidays.so.5
-/usr/lib64/libKF5Holidays.so.5.48.0
+/usr/lib64/libKF5Holidays.so.5.49.0
 /usr/lib64/qt5/qml/org/kde/kholidays/libkholidaysdeclarativeplugin.so
 /usr/lib64/qt5/qml/org/kde/kholidays/qmldir
 

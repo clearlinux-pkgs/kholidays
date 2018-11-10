@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : kholidays
-Version  : 5.51.0
-Release  : 6
-URL      : https://download.kde.org/stable/frameworks/5.51/kholidays-5.51.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.51/kholidays-5.51.0.tar.xz
-Source99 : https://download.kde.org/stable/frameworks/5.51/kholidays-5.51.0.tar.xz.sig
+Version  : 5.52.0
+Release  : 7
+URL      : https://download.kde.org/stable/frameworks/5.52/kholidays-5.52.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.52/kholidays-5.52.0.tar.xz
+Source99 : https://download.kde.org/stable/frameworks/5.52/kholidays-5.52.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -23,6 +23,14 @@ BuildRequires : qtbase-dev mesa-dev
 %description
 To generate the Bison/Flex parser/scanner code after any changes to
 holidayparserplan.ypp or holidayscannerplan.lpp run:
+
+%package abi
+Summary: abi components for the kholidays package.
+Group: Default
+
+%description abi
+abi components for the kholidays package.
+
 
 %package data
 Summary: data components for the kholidays package.
@@ -62,14 +70,14 @@ license components for the kholidays package.
 
 
 %prep
-%setup -q -n kholidays-5.51.0
+%setup -q -n kholidays-5.52.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1539637368
+export SOURCE_DATE_EPOCH=1541867997
 mkdir -p clr-build
 pushd clr-build
 %cmake ..
@@ -77,7 +85,7 @@ make  %{?_smp_mflags} VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1539637368
+export SOURCE_DATE_EPOCH=1541867997
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kholidays
 cp COPYING.LIB %{buildroot}/usr/share/package-licenses/kholidays/COPYING.LIB
@@ -88,10 +96,13 @@ popd
 %files
 %defattr(-,root,root,-)
 
+%files abi
+%defattr(-,root,root,-)
+/usr/share/abi/libKF5Holidays.so.5.52.0.abi
+
 %files data
 %defattr(-,root,root,-)
 /usr/share/locale/ar/LC_MESSAGES/libkholidays5_qt.qm
-/usr/share/locale/ast/LC_MESSAGES/libkholidays5_qt.qm
 /usr/share/locale/be/LC_MESSAGES/libkholidays5_qt.qm
 /usr/share/locale/bg/LC_MESSAGES/libkholidays5_qt.qm
 /usr/share/locale/br/LC_MESSAGES/libkholidays5_qt.qm
@@ -188,7 +199,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKF5Holidays.so.5
-/usr/lib64/libKF5Holidays.so.5.51.0
+/usr/lib64/libKF5Holidays.so.5.52.0
 /usr/lib64/qt5/qml/org/kde/kholidays/libkholidaysdeclarativeplugin.so
 /usr/lib64/qt5/qml/org/kde/kholidays/qmldir
 

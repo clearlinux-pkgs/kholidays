@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : kholidays
-Version  : 5.62.0
-Release  : 22
-URL      : https://download.kde.org/stable/frameworks/5.62/kholidays-5.62.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.62/kholidays-5.62.0.tar.xz
-Source1 : https://download.kde.org/stable/frameworks/5.62/kholidays-5.62.0.tar.xz.sig
+Version  : 5.63.0
+Release  : 23
+URL      : https://download.kde.org/stable/frameworks/5.63/kholidays-5.63.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.63/kholidays-5.63.0.tar.xz
+Source1 : https://download.kde.org/stable/frameworks/5.63/kholidays-5.63.0.tar.xz.sig
 Summary  : KDE library for regional holiday information
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -64,14 +64,14 @@ license components for the kholidays package.
 
 
 %prep
-%setup -q -n kholidays-5.62.0
+%setup -q -n kholidays-5.63.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1568865803
+export SOURCE_DATE_EPOCH=1570920300
 mkdir -p clr-build
 pushd clr-build
 # -Werror is for werrorists
@@ -88,7 +88,7 @@ make  %{?_smp_mflags}  VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1568865803
+export SOURCE_DATE_EPOCH=1570920300
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kholidays
 cp COPYING.LIB %{buildroot}/usr/share/package-licenses/kholidays/COPYING.LIB
@@ -102,6 +102,7 @@ popd
 %files data
 %defattr(-,root,root,-)
 /usr/share/locale/ar/LC_MESSAGES/libkholidays5_qt.qm
+/usr/share/locale/ast/LC_MESSAGES/libkholidays5_qt.qm
 /usr/share/locale/be/LC_MESSAGES/libkholidays5_qt.qm
 /usr/share/locale/bg/LC_MESSAGES/libkholidays5_qt.qm
 /usr/share/locale/br/LC_MESSAGES/libkholidays5_qt.qm
@@ -200,7 +201,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKF5Holidays.so.5
-/usr/lib64/libKF5Holidays.so.5.62.0
+/usr/lib64/libKF5Holidays.so.5.63.0
 /usr/lib64/qt5/qml/org/kde/kholidays/libkholidaysdeclarativeplugin.so
 /usr/lib64/qt5/qml/org/kde/kholidays/qmldir
 

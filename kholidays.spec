@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : kholidays
-Version  : 5.90.0
-Release  : 48
-URL      : https://download.kde.org/stable/frameworks/5.90/kholidays-5.90.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.90/kholidays-5.90.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.90/kholidays-5.90.0.tar.xz.sig
+Version  : 5.91.0
+Release  : 49
+URL      : https://download.kde.org/stable/frameworks/5.91/kholidays-5.91.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.91/kholidays-5.91.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.91/kholidays-5.91.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-2-Clause CC0-1.0 GPL-3.0 LGPL-2.0
@@ -63,15 +63,15 @@ license components for the kholidays package.
 
 
 %prep
-%setup -q -n kholidays-5.90.0
-cd %{_builddir}/kholidays-5.90.0
+%setup -q -n kholidays-5.91.0
+cd %{_builddir}/kholidays-5.91.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641970635
+export SOURCE_DATE_EPOCH=1644800588
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -87,13 +87,13 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1641970635
+export SOURCE_DATE_EPOCH=1644800588
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kholidays
-cp %{_builddir}/kholidays-5.90.0/LICENSES/BSD-2-Clause.txt %{buildroot}/usr/share/package-licenses/kholidays/680ed9349d3d12bd39ddd36e8c4bc6b1b0cb1c0e
-cp %{_builddir}/kholidays-5.90.0/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/kholidays/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0
-cp %{_builddir}/kholidays-5.90.0/LICENSES/GPL-3.0-or-later.txt %{buildroot}/usr/share/package-licenses/kholidays/6091db0aead0d90182b93d3c0d09ba93d188f907
-cp %{_builddir}/kholidays-5.90.0/LICENSES/LGPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/kholidays/20079e8f79713dce80ab09774505773c926afa2a
+cp %{_builddir}/kholidays-5.91.0/LICENSES/BSD-2-Clause.txt %{buildroot}/usr/share/package-licenses/kholidays/680ed9349d3d12bd39ddd36e8c4bc6b1b0cb1c0e
+cp %{_builddir}/kholidays-5.91.0/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/kholidays/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0
+cp %{_builddir}/kholidays-5.91.0/LICENSES/GPL-3.0-or-later.txt %{buildroot}/usr/share/package-licenses/kholidays/6091db0aead0d90182b93d3c0d09ba93d188f907
+cp %{_builddir}/kholidays-5.91.0/LICENSES/LGPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/kholidays/20079e8f79713dce80ab09774505773c926afa2a
 pushd clr-build
 %make_install
 popd
@@ -194,7 +194,7 @@ popd
 /usr/include/KF5/KHolidays/kholidays/lunarphase.h
 /usr/include/KF5/KHolidays/kholidays/sunriseset.h
 /usr/include/KF5/KHolidays/kholidays/zodiac.h
-/usr/include/KF5/kholidays_version.h
+/usr/include/KF5/KHolidays/kholidays_version.h
 /usr/lib64/cmake/KF5Holidays/KF5HolidaysConfig.cmake
 /usr/lib64/cmake/KF5Holidays/KF5HolidaysConfigVersion.cmake
 /usr/lib64/cmake/KF5Holidays/KF5HolidaysTargets-relwithdebinfo.cmake
@@ -205,7 +205,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKF5Holidays.so.5
-/usr/lib64/libKF5Holidays.so.5.90.0
+/usr/lib64/libKF5Holidays.so.5.91.0
 /usr/lib64/qt5/qml/org/kde/kholidays/libkholidaysdeclarativeplugin.so
 /usr/lib64/qt5/qml/org/kde/kholidays/qmldir
 

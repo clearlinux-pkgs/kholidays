@@ -7,7 +7,7 @@
 #
 Name     : kholidays
 Version  : 5.106.0
-Release  : 65
+Release  : 66
 URL      : https://download.kde.org/stable/frameworks/5.106/kholidays-5.106.0.tar.xz
 Source0  : https://download.kde.org/stable/frameworks/5.106/kholidays-5.106.0.tar.xz
 Source1  : https://download.kde.org/stable/frameworks/5.106/kholidays-5.106.0.tar.xz.sig
@@ -75,7 +75,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1684818173
+export SOURCE_DATE_EPOCH=1685577685
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -108,7 +108,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1684818173
+export SOURCE_DATE_EPOCH=1685577685
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kholidays
 cp %{_builddir}/kholidays-%{version}/LICENSES/BSD-2-Clause.txt %{buildroot}/usr/share/package-licenses/kholidays/680ed9349d3d12bd39ddd36e8c4bc6b1b0cb1c0e || :
@@ -206,7 +206,6 @@ popd
 
 %files dev
 %defattr(-,root,root,-)
-/V3/usr/lib64/libKF5Holidays.so
 /usr/include/KF5/KHolidays/KHolidays/AstroSeasons
 /usr/include/KF5/KHolidays/KHolidays/Holiday
 /usr/include/KF5/KHolidays/KHolidays/HolidayRegion
@@ -230,7 +229,6 @@ popd
 
 %files lib
 %defattr(-,root,root,-)
-/V3/usr/lib64/libKF5Holidays.so.5
 /V3/usr/lib64/libKF5Holidays.so.5.106.0
 /V3/usr/lib64/qt5/qml/org/kde/kholidays/libkholidaysdeclarativeplugin.so
 /usr/lib64/libKF5Holidays.so.5

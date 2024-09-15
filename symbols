@@ -1,72 +1,12 @@
-libKF6Holidays.so.6:KHolidays::LunarPhase::phaseAtDate(QDate const&)
-libKF6Holidays.so.6:KHolidays::LunarPhase::phaseNameAtDate(QDate const&)
-libKF6Holidays.so.6:KHolidays::LunarPhase::phaseName(KHolidays::LunarPhase::Phase)
-libKF6Holidays.so.6:KHolidays::SunRiseSet::isPolarDay(QDate const&, double)
-libKF6Holidays.so.6:KHolidays::SunRiseSet::utcSunrise(QDate const&, double, double)
-libKF6Holidays.so.6:KHolidays::SunRiseSet::isPolarNight(QDate const&, double)
-libKF6Holidays.so.6:KHolidays::SunRiseSet::isPolarTwilight(QDate const&, double)
-libKF6Holidays.so.6:KHolidays::SunRiseSet::utcDawn(QDate const&, double, double)
-libKF6Holidays.so.6:KHolidays::SunRiseSet::utcDusk(QDate const&, double, double)
-libKF6Holidays.so.6:KHolidays::SunRiseSet::utcSunset(QDate const&, double, double)
-libKF6Holidays.so.6:KHolidays::AstroSeasons::seasonDate(KHolidays::AstroSeasons::Season, int)
 libKF6Holidays.so.6:KHolidays::AstroSeasons::seasonName(KHolidays::AstroSeasons::Season)
-libKF6Holidays.so.6:KHolidays::AstroSeasons::seasonAtDate(QDate const&)
-libKF6Holidays.so.6:KHolidays::AstroSeasons::seasonNameAtDate(QDate const&)
-libKF6Holidays.so.6:KHolidays::HolidayRegion::countryCode(QString const&)
-libKF6Holidays.so.6:KHolidays::HolidayRegion::description(QString const&)
-libKF6Holidays.so.6:KHolidays::HolidayRegion::regionCodes()
-libKF6Holidays.so.6:KHolidays::HolidayRegion::languageCode(QString const&)
-libKF6Holidays.so.6:KHolidays::HolidayRegion::defaultRegionCode(QString const&, QString const&)
-libKF6Holidays.so.6:KHolidays::HolidayRegion::name(QString const&)
-libKF6Holidays.so.6:KHolidays::HolidayRegion::isValid(QString const&)
+libKF6Holidays.so.6:KHolidays::Holiday::Holiday()
+libKF6Holidays.so.6:KHolidays::Holiday::~Holiday()
 libKF6Holidays.so.6:KHolidays::HolidayRegion::HolidayRegion(KHolidays::HolidayRegion&&)
-libKF6Holidays.so.6:KHolidays::HolidayRegion::HolidayRegion(QString const&)
-libKF6Holidays.so.6:KHolidays::HolidayRegion::HolidayRegion(QFileInfo const&)
-libKF6Holidays.so.6:KHolidays::HolidayRegion::HolidayRegion(KHolidays::HolidayRegion const&)
-libKF6Holidays.so.6:KHolidays::HolidayRegion::HolidayRegion(KHolidays::HolidayRegion&&)
-libKF6Holidays.so.6:KHolidays::HolidayRegion::HolidayRegion(QString const&)
-libKF6Holidays.so.6:KHolidays::HolidayRegion::HolidayRegion(QFileInfo const&)
-libKF6Holidays.so.6:KHolidays::HolidayRegion::HolidayRegion(KHolidays::HolidayRegion const&)
-libKF6Holidays.so.6:KHolidays::HolidayRegion::~HolidayRegion()
-libKF6Holidays.so.6:KHolidays::HolidayRegion::~HolidayRegion()
 libKF6Holidays.so.6:KHolidays::HolidayRegion::operator=(KHolidays::HolidayRegion&&)
-libKF6Holidays.so.6:KHolidays::HolidayRegion::operator=(KHolidays::HolidayRegion const&)
-libKF6Holidays.so.6:KHolidays::Zodiac::signSymbol(KHolidays::Zodiac::ZodiacSigns)
+libKF6Holidays.so.6:KHolidays::HolidayRegion::regionCodes()
+libKF6Holidays.so.6:KHolidays::HolidayRegion::~HolidayRegion()
+libKF6Holidays.so.6:KHolidays::LunarPhase::phaseName(KHolidays::LunarPhase::Phase)
+libKF6Holidays.so.6:KHolidays::Zodiac::Zodiac(KHolidays::Zodiac::ZodiacType)
 libKF6Holidays.so.6:KHolidays::Zodiac::signName(KHolidays::Zodiac::ZodiacSigns)
-libKF6Holidays.so.6:KHolidays::Zodiac::Zodiac(KHolidays::Zodiac::ZodiacType)
-libKF6Holidays.so.6:KHolidays::Zodiac::Zodiac(KHolidays::Zodiac const&)
-libKF6Holidays.so.6:KHolidays::Zodiac::Zodiac(KHolidays::Zodiac::ZodiacType)
-libKF6Holidays.so.6:KHolidays::Zodiac::Zodiac(KHolidays::Zodiac const&)
+libKF6Holidays.so.6:KHolidays::Zodiac::signSymbol(KHolidays::Zodiac::ZodiacSigns)
 libKF6Holidays.so.6:KHolidays::Zodiac::~Zodiac()
-libKF6Holidays.so.6:KHolidays::Zodiac::~Zodiac()
-libKF6Holidays.so.6:KHolidays::Zodiac::operator=(KHolidays::Zodiac const&)
-libKF6Holidays.so.6:KHolidays::Holiday::Holiday(KHolidays::Holiday const&)
-libKF6Holidays.so.6:KHolidays::Holiday::Holiday()
-libKF6Holidays.so.6:KHolidays::Holiday::Holiday(KHolidays::Holiday const&)
-libKF6Holidays.so.6:KHolidays::Holiday::Holiday()
-libKF6Holidays.so.6:KHolidays::Holiday::~Holiday()
-libKF6Holidays.so.6:KHolidays::Holiday::~Holiday()
-libKF6Holidays.so.6:KHolidays::Holiday::operator=(KHolidays::Holiday const&)
-libKF6Holidays.so.6:KHolidays::HolidayRegion::regionCode() const
-libKF6Holidays.so.6:KHolidays::HolidayRegion::countryCode() const
-libKF6Holidays.so.6:KHolidays::HolidayRegion::description() const
-libKF6Holidays.so.6:KHolidays::HolidayRegion::rawHolidays(QDate const&, QDate const&) const
-libKF6Holidays.so.6:KHolidays::HolidayRegion::rawHolidays(QDate const&, QDate const&, QString const&) const
-libKF6Holidays.so.6:KHolidays::HolidayRegion::languageCode() const
-libKF6Holidays.so.6:KHolidays::HolidayRegion::rawHolidaysWithAstroSeasons(QDate const&) const
-libKF6Holidays.so.6:KHolidays::HolidayRegion::rawHolidaysWithAstroSeasons(QDate const&, QDate const&) const
-libKF6Holidays.so.6:KHolidays::HolidayRegion::rawHolidaysWithAstroSeasons(int) const
-libKF6Holidays.so.6:KHolidays::HolidayRegion::name() const
-libKF6Holidays.so.6:KHolidays::HolidayRegion::isValid() const
-libKF6Holidays.so.6:KHolidays::HolidayRegion::isHoliday(QDate const&) const
-libKF6Holidays.so.6:KHolidays::Zodiac::signAtDate(QDate const&) const
-libKF6Holidays.so.6:KHolidays::Zodiac::signNameAtDate(QDate const&) const
-libKF6Holidays.so.6:KHolidays::Holiday::description() const
-libKF6Holidays.so.6:KHolidays::Holiday::categoryList() const
-libKF6Holidays.so.6:KHolidays::Holiday::observedEndDate() const
-libKF6Holidays.so.6:KHolidays::Holiday::observedStartDate() const
-libKF6Holidays.so.6:KHolidays::Holiday::name() const
-libKF6Holidays.so.6:KHolidays::Holiday::dayType() const
-libKF6Holidays.so.6:KHolidays::Holiday::duration() const
-libKF6Holidays.so.6:KHolidays::Holiday::operator>(KHolidays::Holiday const&) const
-libKF6Holidays.so.6:KHolidays::Holiday::operator<(KHolidays::Holiday const&) const
